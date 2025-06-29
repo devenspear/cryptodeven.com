@@ -23,12 +23,9 @@ export default function Hero() {
   }
 
   return (
-    <section id="top" className="relative overflow-hidden bg-gradient-to-b from-orange-50 via-white to-white dark:from-gray-900 dark:via-gray-900 dark:to-gray-900 pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-48 lg:pb-36">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-orange-200/30 dark:bg-grid-gray-800/30 [mask-image:linear-gradient(0deg,transparent,black_20%)]" />
-        <div className="absolute -left-1/2 top-0 h-[800px] w-[1200px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-orange-500/20 to-purple-500/20 blur-3xl" />
-      </div>
+    <section id="top" className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900 pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-48 lg:pb-36">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 via-white/50 to-purple-50/50 dark:from-gray-900/50 dark:via-gray-900/50 dark:to-purple-900/10" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
@@ -102,13 +99,9 @@ export default function Hero() {
                   <ArrowDownIcon className="h-5 w-5 animate-bounce" />
                 </div>
               </a>
-              {/* Animated background effect */}
+              {/* Subtle hover effect */}
               <div 
-                className="absolute inset-0 -z-0 rounded-full bg-gradient-to-br from-orange-100 to-purple-100 opacity-0 transition-all duration-500 group-hover:opacity-100 dark:from-orange-900/30 dark:to-purple-900/30"
-                style={{
-                  transform: isHovered ? 'scale(1.5) rotate(5deg)' : 'scale(1) rotate(0)',
-                  transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
-                }}
+                className="absolute inset-0 -z-0 rounded-full bg-gradient-to-br from-orange-50 to-purple-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-orange-900/10 dark:to-purple-900/10"
               />
             </div>
           </AnimateOnScroll>
