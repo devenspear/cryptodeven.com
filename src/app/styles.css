@@ -1,0 +1,10 @@
+/* Minimal CSS to test */
+:root {
+  --foreground: #090a13;
+  --background: #fff7ed;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}

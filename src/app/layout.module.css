@@ -1,0 +1,10 @@
+/* Layout.module.css */
+.container {
+  --foreground: #090a13;
+  --background: #fff7ed;
+  color: var(--foreground);
+  background-color: var(--background);
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
