@@ -28,9 +28,15 @@ export function AnimateOnScroll({
   threshold = 0.1,
 }: AnimateOnScrollProps) {
   const [isVisible, setIsVisible] = useState(false);
+  const [isPreloaded, setIsPreloaded] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
   const animationRef = useRef<number | null>(null);
+
+  // Preload content immediately
+  useEffect(() => {
+    setIsPreloaded(true);
+  }, []);
 
   useEffect(() => {
     // Cleanup previous observer
@@ -58,10 +64,10 @@ export function AnimateOnScroll({
       });
     };
 
-    // Create new observer
+    // Create new observer with mobile-optimized settings
     observerRef.current = new IntersectionObserver(handleIntersect, {
       threshold: threshold,
-      rootMargin: '0px 0px -50px 0px' // Start animation when element is 50px from viewport
+      rootMargin: '0px 0px -20px 0px' // Start animation when element is 20px from viewport (more responsive)
     });
 
     // Start observing
@@ -83,20 +89,34 @@ export function AnimateOnScroll({
 
   // Map animation types to their corresponding classes
   const animationClasses: Record<AnimationType, string> = {
-    'fade-up': 'fade-in-up',
-    'fade-down': 'fade-in-down',
-    'fade-left': 'fade-in-left',
-    'fade-right': 'fade-in-right',
-    'fade-in': 'opacity-0',
-    'bitcoin-pulse': 'opacity-0',
-    'float': 'opacity-0',
-    'shine': 'opacity-0',
+    'fade-up': 'transform translate-y-4',
+    'fade-down': 'transform -translate-y-4',
+    'fade-left': 'transform translate-x-4',
+    'fade-right': 'transform -translate-x-4',
+    'fade-in': 'opacity-90',
+    'bitcoin-pulse': 'opacity-90',
+    'float': 'opacity-90',
+    'shine': 'opacity-90',
   };
 
   // Add specific animation classes when element is visible
   const getAnimationClass = () => {
-    if (!isVisible) return 'opacity-0';
+    // Content is always visible, but animations enhance the experience
+    if (!isPreloaded) return 'opacity-100'; // Fallback for no-JS
     
+    if (!isVisible) {
+      // Before scrolling into view - subtle initial state
+      switch (type) {
+        case 'bitcoin-pulse':
+        case 'float':
+        case 'shine':
+          return 'opacity-90';
+        default:
+          return animationClasses[type];
+      }
+    }
+    
+    // When scrolled into view - enhanced animations
     switch (type) {
       case 'bitcoin-pulse':
         return 'opacity-100 animate-bitcoin-pulse';
@@ -104,8 +124,16 @@ export function AnimateOnScroll({
         return 'opacity-100 animate-float';
       case 'shine':
         return 'opacity-100 animate-shine';
+      case 'fade-up':
+        return 'transform translate-y-0 opacity-100';
+      case 'fade-down':
+        return 'transform translate-y-0 opacity-100';
+      case 'fade-left':
+        return 'transform translate-x-0 opacity-100';
+      case 'fade-right':
+        return 'transform translate-x-0 opacity-100';
       default:
-        return animationClasses[type];
+        return 'opacity-100';
     }
   };
 
@@ -114,8 +142,10 @@ export function AnimateOnScroll({
       ref={elementRef}
       className={`${className || ''} ${getAnimationClass()}`}
       style={{
-        transition: `opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)`,
+        transition: `opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)`,
         transitionDelay: isVisible ? `${delay}ms` : '0ms',
+        // Ensure content is always visible for accessibility and SEO
+        minHeight: 'fit-content',
       }}
     >
       {children}
