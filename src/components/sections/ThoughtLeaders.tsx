@@ -1,164 +1,165 @@
-import { motion } from 'framer-motion';
-import { Twitter, Linkedin, Link as LinkIcon } from 'lucide-react';
+import { AnimateOnScroll } from '../animation/AnimateOnScroll';
 
 const thoughtLeaders = [
   {
-    name: 'Michael Saylor',
-    role: 'Bitcoin Advocate',
-    xHandle: '@saylor',
-    xUrl: 'https://twitter.com/saylor',
-    linkedinUrl: 'https://www.linkedin.com/in/michael-saylor-b7b3b5',
-    website: 'https://www.michaelsaylor.com/',
-    quote: 'Bitcoin is the apex property of the human race.',
+    name: "Michael Saylor",
+    focus: "Bitcoin treasury",
+    handle: "@saylor",
+    link: "https://twitter.com/saylor",
+    description: "MicroStrategy CEO and Bitcoin advocate",
+    initials: "MS",
+    color: "bg-indigo-500"
   },
   {
-    name: 'Jack Mallers',
-    role: 'Founder & CEO, Strike',
-    xHandle: '@jackmallers',
-    xUrl: 'https://twitter.com/jackmallers',
-    linkedinUrl: 'https://www.linkedin.com/in/jackmallers',
-    website: 'https://strike.me/',
-    quote: 'Gold needed trust — Bitcoin doesn\'t.',
+    name: "Jack Mallers",
+    focus: "Lightning payments",
+    handle: "@jackmallers",
+    link: "https://twitter.com/jackmallers",
+    description: "Strike CEO and Lightning Network pioneer",
+    initials: "JM",
+    color: "bg-blue-500"
   },
   {
-    name: 'Cathie Wood',
-    role: 'CEO & CIO, ARK Invest',
-    xHandle: '@CathieDWood',
-    xUrl: 'https://twitter.com/CathieDWood',
-    linkedinUrl: 'https://www.linkedin.com/in/cathiewood',
-    website: 'https://ark-invest.com/',
-    quote: 'Bitcoin is the first global digital monetary system.',
+    name: "Cathie Wood",
+    focus: "Disruptive investing",
+    handle: "@CathieDWood",
+    link: "https://twitter.com/CathieDWood",
+    description: "ARK Invest CEO and innovation investor",
+    initials: "CW",
+    color: "bg-purple-500"
   },
   {
-    name: 'Robert Breedlove',
-    role: 'Bitcoin Philosopher',
-    xHandle: '@Breedlove22',
-    xUrl: 'https://twitter.com/Breedlove22',
-    linkedinUrl: 'https://www.linkedin.com/in/breedlove22',
-    website: 'https://breedlove22.com/',
-    quote: 'Bitcoin is the most important invention in the history of the world since the Internet.',
+    name: "Robert Breedlove",
+    focus: "Monetary theory",
+    handle: "@Breedlove22",
+    link: "https://twitter.com/Breedlove22",
+    description: "Philosopher and Bitcoin educator",
+    initials: "RB",
+    color: "bg-green-500"
   },
   {
-    name: 'Natalie Brunell',
-    role: 'Bitcoin Journalist',
-    xHandle: '@natbrunell',
-    xUrl: 'https://twitter.com/natbrunell',
-    linkedinUrl: 'https://www.linkedin.com/in/nataliebrunell',
-    website: 'https://www.nataliebrunell.com/',
-    quote: 'Bitcoin is the most important tool we have to separate money from the state.',
+    name: "Natalie Brunell",
+    focus: "Bitcoin journalism",
+    handle: "@natbrunell",
+    link: "https://twitter.com/natbrunell",
+    description: "Bitcoin journalist and podcast host",
+    initials: "NB",
+    color: "bg-pink-500"
   },
   {
-    name: 'Raoul Pal',
-    role: 'CEO, Real Vision',
-    xHandle: '@RaoulGMI',
-    xUrl: 'https://twitter.com/RaoulGMI',
-    linkedinUrl: 'https://www.linkedin.com/in/raoul-pal-0b0a3b6',
-    website: 'https://www.realvision.com/',
-    quote: 'Bitcoin is the most asymmetric trade of our lifetime.',
+    name: "Raoul Pal",
+    focus: "Macro + crypto",
+    handle: "@RaoulGMI",
+    link: "https://twitter.com/RaoulGMI",
+    description: "Real Vision CEO and macro investor",
+    initials: "RP",
+    color: "bg-orange-500"
   },
   {
-    name: 'Balaji Srinivasan',
-    role: 'Investor & Technologist',
-    xHandle: '@balajis',
-    xUrl: 'https://twitter.com/balajis',
-    linkedinUrl: 'https://www.linkedin.com/in/balajis',
-    website: 'https://balajis.com/',
-    quote: 'Bitcoin is the first digital currency that can\'t be shut down.',
+    name: "Balaji Srinivasan",
+    focus: "Network states",
+    handle: "@balajis",
+    link: "https://twitter.com/balajis",
+    description: "Entrepreneur and technologist",
+    initials: "BS",
+    color: "bg-teal-500"
+  }
+];
+
+const quotes = [
+  {
+    text: "Gold needed trust — Bitcoin doesn't.",
+    author: "Jack Mallers",
+    color: "bg-blue-50 border-blue-200"
   },
+  {
+    text: "Bitcoin is the apex property of the human race.",
+    author: "Michael Saylor",
+    color: "bg-indigo-50 border-indigo-200"
+  }
 ];
 
 export default function ThoughtLeaders() {
   return (
-    <section id="thought-leaders" className="bg-white dark:bg-gray-900 py-20 sm:py-24 lg:py-28">
+    <section id="thought-leaders" className="py-16 sm:py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-            Voices in the space
+        <AnimateOnScroll type="fade-up" className="text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+            <span className="text-gradient">Thought-Leader</span> Gallery
           </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-xl text-gray-600 dark:text-gray-300">
-            Learn from the most influential thinkers in cryptocurrency
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+            Real voices, real conviction. Tap a card to explore their latest insights.
           </p>
-        </div>
+        </AnimateOnScroll>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {thoughtLeaders.map((leader, index) => (
-            <motion.div
-              key={leader.xHandle}
-              className="bg-gray-50 dark:bg-gray-800 rounded-lg shadow overflow-hidden"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className="p-6">
-                <div className="flex items-center">
-                  <div className="flex-shrink-0">
-                    <div className="h-12 w-12 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center">
-                      <span className="text-xl font-medium text-indigo-600 dark:text-indigo-400">
-                        {leader.name.split(' ').map(n => n[0]).join('')}
-                      </span>
+        <div className="mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {thoughtLeaders.map((leader, index) => (
+              <AnimateOnScroll key={leader.name} type="fade-up" delay={index * 50}>
+                <div className="bg-white rounded-xl shadow-medium hover:shadow-lg transition-all duration-300 overflow-hidden group hover:-translate-y-1 border border-gray-100">
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className={`w-12 h-12 ${leader.color} rounded-full flex items-center justify-center`}>
+                        <span className="text-white font-bold text-sm">
+                          {leader.initials}
+                        </span>
+                      </div>
+                      <a
+                        href={leader.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-indigo-500 transition-colors"
+                      >
+                        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    </div>
+                    
+                    <h3 className="text-lg font-bold text-gray-900 mb-1">
+                      {leader.name}
+                    </h3>
+                    
+                    <p className="text-indigo-600 font-medium mb-2">
+                      {leader.focus}
+                    </p>
+                    
+                    <p className="text-gray-600 text-sm mb-3">
+                      {leader.description}
+                    </p>
+                    
+                    <div className="flex items-center text-sm text-gray-500">
+                      <span className="font-mono">{leader.handle}</span>
                     </div>
                   </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900 dark:text-white">{leader.name}</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{leader.role}</p>
-                  </div>
                 </div>
-                <blockquote className="mt-4">
-                  <p className="text-base text-gray-700 dark:text-gray-300 italic">"{leader.quote}"</p>
-                </blockquote>
-                <div className="mt-6 flex space-x-4">
-                  <a
-                    href={leader.xUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 transition-colors"
-                    aria-label={`${leader.name} on X`}
-                  >
-                    <Twitter className="h-5 w-5" />
-                  </a>
-                  <a
-                    href={leader.linkedinUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 transition-colors"
-                    aria-label={`${leader.name} on LinkedIn`}
-                  >
-                    <Linkedin className="h-5 w-5" />
-                  </a>
-                  <a
-                    href={leader.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 transition-colors"
-                    aria-label={`${leader.name}'s website`}
-                  >
-                    <LinkIcon className="h-5 w-5" />
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </AnimateOnScroll>
+            ))}
+          </div>
         </div>
 
-        <div className="mt-16 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg p-6 md:p-8">
-          <div className="md:flex md:items-center md:justify-between">
-            <div>
-              <h3 className="text-lg font-medium text-indigo-900 dark:text-indigo-100">Want to dive deeper?</h3>
-              <p className="mt-2 text-sm text-indigo-800 dark:text-indigo-200">
-                Follow these thought leaders for daily insights and analysis on cryptocurrency.
-              </p>
-            </div>
-            <div className="mt-4 md:mt-0">
-              <a
-                href="https://twitter.com/CryptoDeven"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-white hover:bg-indigo-50 dark:bg-gray-800 dark:text-indigo-300 dark:hover:bg-gray-700 transition-colors"
-              >
-                Follow us on X
-              </a>
-            </div>
+        {/* Quotes Section */}
+        <div className="mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {quotes.map((quote, index) => (
+              <AnimateOnScroll key={index} type="fade-up" delay={700 + index * 100}>
+                <div className={`${quote.color} rounded-xl p-8 shadow-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border`}>
+                  <div className="flex items-start">
+                    <svg className="h-8 w-8 text-gray-400 mr-4 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 32 32">
+                      <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"/>
+                    </svg>
+                    <div>
+                      <blockquote className="text-lg text-gray-900 font-medium mb-4">
+                        "{quote.text}"
+                      </blockquote>
+                      <cite className="text-indigo-600 font-semibold text-sm">
+                        —{quote.author}
+                      </cite>
+                    </div>
+                  </div>
+                </div>
+              </AnimateOnScroll>
+            ))}
           </div>
         </div>
       </div>

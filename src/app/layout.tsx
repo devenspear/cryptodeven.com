@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "@/context/ThemeContext";
 import "./globals.css";
+import { ThemeProvider } from "../context/ThemeContext";
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -18,7 +20,7 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'CryptoDeven – Crypto Clarity for Absolute Beginners',
+  title: 'Crypto Clarity for Absolute Beginners',
   description: 'From zero clue to crypto-confident. Plain-English guides, expert picks, and one weekly email that keeps you ahead.',
   keywords: ['crypto', 'bitcoin', 'blockchain', 'cryptocurrency', 'beginner', 'education', 'learning'],
   openGraph: {
@@ -45,9 +47,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} font-sans`}>
       <head />
-      <body className={inter.className}>
+      <body className={`${inter.className} min-h-screen bg-white`}>
         <ThemeProvider>
-          {children}
+          <div className="min-h-screen">
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

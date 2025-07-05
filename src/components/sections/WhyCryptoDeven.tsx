@@ -1,94 +1,80 @@
-import { motion } from 'framer-motion';
-import { CheckCircleIcon, LightBulbIcon, ShieldCheckIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
-
-const features = [
-  {
-    name: 'No Jargon',
-    description: 'If you can send an email, you can understand Bitcoin here.',
-    icon: LightBulbIcon,
-  },
-  {
-    name: 'Trusted Sources',
-    description: 'We curate PDFs, videos, and quotes from industry leaders and Wall Street analysts.',
-    icon: ShieldCheckIcon,
-  },
-  {
-    name: 'Weekly Guidance',
-    description: 'One concise newsletter keeps you moving forward.',
-    icon: ArrowPathIcon,
-  },
-];
+import { AnimateOnScroll } from '../animation/AnimateOnScroll';
 
 export default function WhyCryptoDeven() {
   return (
-    <section id="why" className="bg-white dark:bg-gray-900 py-20 sm:py-24 lg:py-28">
+    <section id="why" className="py-16 sm:py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-            Why CryptoDeven?
+        <AnimateOnScroll type="fade-up" className="text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+            <span className="text-gradient">Why now?</span> Bitcoin hits 10% adoption milestone
           </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-xl text-gray-600 dark:text-gray-300">
-            Crypto adoption just crossed <span className="font-semibold text-indigo-600 dark:text-indigo-400">10% of the world</span> — 
-            the same tipping-point where the internet exploded in the '90s. Early learners captured the upside then; 
-            crypto offers a similar window now.
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+            We're at the tipping point. History shows that once a technology reaches 10% adoption, 
+            mass adoption follows rapidly. Don't get left behind.
           </p>
-        </div>
+        </AnimateOnScroll>
 
-        <div className="mt-16">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.name}
-                className="pt-6"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="flow-root bg-gray-50 dark:bg-gray-800 rounded-lg px-6 pb-8 h-full">
-                  <div className="-mt-6">
-                    <div>
-                      <span className="inline-flex items-center justify-center p-3 bg-indigo-600 rounded-md shadow-lg">
-                        <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                      </span>
-                    </div>
-                    <h3 className="mt-8 text-lg font-medium text-gray-900 dark:text-white tracking-tight">
-                      {feature.name}
-                    </h3>
-                    <p className="mt-5 text-base text-gray-600 dark:text-gray-300">
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-16 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg p-6 md:p-8">
-          <div className="flex">
-            <div className="flex-shrink-0">
-              <CheckCircleIcon className="h-6 w-6 text-indigo-600 dark:text-indigo-400" aria-hidden="true" />
-            </div>
-            <div className="ml-3">
-              <h3 className="text-lg font-medium text-indigo-800 dark:text-indigo-200">
-                CryptoDeven fixes that with three promises:
-              </h3>
-              <div className="mt-4">
-                <ul role="list" className="space-y-3">
-                  {features.map((feature) => (
-                    <li key={feature.name} className="flex items-start">
-                      <CheckCircleIcon className="h-5 w-5 text-indigo-500 dark:text-indigo-400 mt-0.5" aria-hidden="true" />
-                      <span className="ml-2 text-gray-700 dark:text-gray-300">
-                        <span className="font-medium">{feature.name}:</span> {feature.description}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <AnimateOnScroll type="fade-up" delay={100}>
+            <div className="rounded-xl bg-white p-8 text-center shadow-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="mx-auto h-12 w-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-6">
+                <svg className="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
               </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2">10%</h3>
+              <p className="text-lg font-semibold text-gray-900 mb-2">Current adoption rate</p>
+              <p className="text-sm text-gray-600">
+                The critical mass threshold where exponential growth begins
+              </p>
             </div>
-          </div>
+          </AnimateOnScroll>
+
+          <AnimateOnScroll type="fade-up" delay={200}>
+            <div className="rounded-xl bg-white p-8 text-center shadow-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="mx-auto h-12 w-12 rounded-lg bg-green-100 flex items-center justify-center mb-6">
+                <svg className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                </svg>
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2">$1.4T</h3>
+              <p className="text-lg font-semibold text-gray-900 mb-2">Market capitalization</p>
+              <p className="text-sm text-gray-600">
+                Larger than most countries' GDP, still growing rapidly
+              </p>
+            </div>
+          </AnimateOnScroll>
+
+          <AnimateOnScroll type="fade-up" delay={300}>
+            <div className="rounded-xl bg-white p-8 text-center shadow-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="mx-auto h-12 w-12 rounded-lg bg-purple-100 flex items-center justify-center mb-6">
+                <svg className="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2">500M+</h3>
+              <p className="text-lg font-semibold text-gray-900 mb-2">Global users</p>
+              <p className="text-sm text-gray-600">
+                From early adopters to mainstream institutions
+              </p>
+            </div>
+          </AnimateOnScroll>
         </div>
+
+        <AnimateOnScroll type="fade-up" delay={400} className="mt-16 text-center">
+          <p className="text-lg text-gray-600 mb-8">
+            The window for early adoption is closing. Get educated before the next wave.
+          </p>
+          <a
+            href="#get-started"
+            className="inline-flex items-center px-8 py-4 rounded-lg bg-indigo-600 text-base font-semibold text-white shadow-soft hover:bg-indigo-500 hover:shadow-medium transform hover:-translate-y-0.5 transition-all duration-200"
+          >
+            Start Learning Now
+            <svg className="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          </a>
+        </AnimateOnScroll>
       </div>
     </section>
   );

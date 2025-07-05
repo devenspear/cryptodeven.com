@@ -57,7 +57,7 @@ export default function Footer() {
             <div key={item.name} className="px-5 py-2">
               <Link
                 href={item.href}
-                className="text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+                className="text-base text-gray-500 hover:text-bitcoin-600 dark:text-gray-400 dark:hover:text-bitcoin-400 transition-colors"
               >
                 {item.name}
               </Link>
@@ -71,7 +71,7 @@ export default function Footer() {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+              className="text-gray-400 hover:text-bitcoin-500 dark:hover:text-bitcoin-400 transition-colors"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -79,15 +79,15 @@ export default function Footer() {
           ))}
         </div>
         <p className="mt-8 text-center text-base text-gray-500 dark:text-gray-400">
-          &copy; {new Date().getFullYear()} CryptoDeven. All rights reserved.
+          &copy; {new Date().getFullYear()} CryptoDeven · Built for learners, not traders
         </p>
         <div className="mt-2 flex justify-center space-x-6 text-sm text-gray-500 dark:text-gray-400">
-          <Link href="/privacy" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
-            Privacy Policy
+          <Link href="/privacy" className="hover:text-bitcoin-600 dark:hover:text-bitcoin-400 transition-colors">
+            Privacy
           </Link>
           <span>•</span>
-          <Link href="/terms" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
-            Terms of Service
+          <Link href="/terms" className="hover:text-bitcoin-600 dark:hover:text-bitcoin-400 transition-colors">
+            Terms
           </Link>
         </div>
       </div>
