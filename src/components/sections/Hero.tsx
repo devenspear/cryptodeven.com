@@ -40,7 +40,7 @@ export default function Hero() {
           
           <AnimateOnScroll type="fade-up" delay={200}>
             <p className="mx-auto mt-10 max-w-3xl text-lg leading-8 text-gray-600">
-              From zero clue to crypto-confident. Plain-English guides, expert picks, and one weekly email that keeps you ahead.
+              From zero clue to crypto-confident. Plain-English guides, expert picks, and curated, trustworthy resources to help you start smart and stay secure.
             </p>
           </AnimateOnScroll>
           
@@ -80,7 +80,7 @@ export default function Hero() {
                   <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  Weekly insights
+                  Proven sources
                 </div>
               </div>
             </div>
