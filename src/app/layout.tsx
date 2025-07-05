@@ -27,6 +27,28 @@ export const metadata: Metadata = {
   title: 'Crypto Clarity for Absolute Beginners',
   description: 'From zero clue to crypto-confident. Plain-English guides, expert picks, and one weekly email that keeps you ahead.',
   keywords: ['crypto', 'bitcoin', 'blockchain', 'cryptocurrency', 'beginner', 'education', 'learning'],
+  authors: [{ name: 'CryptoDeven' }],
+  creator: 'CryptoDeven',
+  publisher: 'CryptoDeven',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://cryptodeven.com',
+  },
+  icons: {
+    icon: '/cryptodeven_icon.png',
+    shortcut: '/cryptodeven_icon.png',
+    apple: '/cryptodeven_icon.png',
+  },
   openGraph: {
     title: 'CryptoDeven – Crypto Clarity for Absolute Beginners',
     description: 'From zero clue to crypto-confident. Plain-English guides, expert picks, and one weekly email that keeps you ahead.',
@@ -34,12 +56,21 @@ export const metadata: Metadata = {
     siteName: 'CryptoDeven',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/cryptodeven_icon.png',
+        width: 800,
+        height: 600,
+        alt: 'CryptoDeven Logo',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'CryptoDeven – Crypto Clarity for Absolute Beginners',
     description: 'From zero clue to crypto-confident. Plain-English guides, expert picks, and one weekly email that keeps you ahead.',
     creator: '@CryptoDeven',
+    images: ['/cryptodeven_icon.png'],
   },
 };
 
@@ -56,6 +87,41 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CMKL6MH2QV"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-CMKL6MH2QV');
+            `,
+          }}
+        />
+        
+        {/* Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'CryptoDeven',
+              description: 'From zero clue to crypto-confident. Plain-English guides, expert picks, and one weekly email that keeps you ahead.',
+              url: 'https://cryptodeven.com',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://cryptodeven.com/search?q={search_term_string}',
+                'query-input': 'required name=search_term_string',
+              },
+              sameAs: [
+                'https://twitter.com/CryptoDeven',
+              ],
+            }),
+          }}
+        />
       </head>
       <body className={`${inter.className} min-h-screen bg-white`}>
         <ThemeProvider>
