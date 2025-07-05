@@ -1,23 +1,7 @@
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
 import { AnimateOnScroll } from '../animation/AnimateOnScroll';
 
 export default function Hero() {
-  // Use a state to handle client-side rendering
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return (
-      <section className="h-screen">
-        {/* Empty section while loading */}
-      </section>
-    );
-  }
-
   return (
     <section id="top" className="relative bg-gradient-to-br from-slate-50 to-white pt-24 pb-20 sm:pt-32 sm:pb-28 lg:pt-40 lg:pb-36">
       {/* Background decoration */}

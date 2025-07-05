@@ -22,12 +22,6 @@ export default function PrivacyModal({ isOpen, onClose }: PrivacyModalProps) {
 
   if (!isOpen) return null;
 
-  const today = new Date().toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Backdrop */}
@@ -58,7 +52,7 @@ export default function PrivacyModal({ isOpen, onClose }: PrivacyModalProps) {
         {/* Content */}
         <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
           <p className="text-sm text-gray-600 mb-6">
-            <strong>Effective Date:</strong> {today}
+            <strong>Effective Date:</strong> July 4, 2025
           </p>
 
           <div className="prose prose-gray max-w-none">

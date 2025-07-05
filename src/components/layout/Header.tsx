@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTheme } from '../../context/ThemeContext';
 import { ThemeToggle } from '../ThemeToggle';
 
@@ -43,9 +44,13 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center touch-friendly">
-              <span className="text-xl sm:text-2xl font-bold text-gray-900">
-                CryptoDeven
-              </span>
+              <Image
+                src="/cryptodeven_icon.png"
+                alt="CryptoDeven"
+                width={40}
+                height={40}
+                className="h-8 w-8 sm:h-10 sm:w-10"
+              />
             </Link>
           </div>
 
