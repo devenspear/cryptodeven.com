@@ -13,39 +13,45 @@ export default function Contact() {
         <AnimateOnScroll type="fade-up" delay={400}>
           <div className="mt-12 max-w-4xl mx-auto">
             <div className="bg-white rounded-xl p-8 md:p-12 shadow-medium">
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                For thirty years, Deven Spear has seen the future differently, building ventures at the intersection of fast-moving technology and deep human need. He bridges worlds—blending systems engineering with design thinking, and strategic analysis with artistry—to spot patterns of opportunity where others see chaos.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                This unique perspective was shaped in the mid-1990s while experimenting with the foundations of Web 1.0 and informs his current work deciphering the third wave of disruption from AI and decentralized networks.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Ultimately, his entire career, spanning six ventures from software to Web3, has been defined by a single question: How can technology serve our deepest human needs?
-              </p>
-              <div className="text-center">
+              <div className="relative">
+                <img
+                  src="/DevenHead2025.jpg"
+                  alt="Deven Spear"
+                  className="float-right ml-8 mb-6 w-48 h-auto rounded-lg shadow-medium object-cover"
+                />
+                <div className="text-lg text-gray-600 leading-relaxed space-y-6">
+                  <p>
+                    For thirty years, Deven Spear has seen the future differently, building ventures at the intersection of fast-moving technology and deep human need. He bridges worlds—blending systems engineering with design thinking, and strategic analysis with artistry—to spot patterns of opportunity where others see chaos.
+                  </p>
+                  <p>
+                    This unique perspective was shaped in the mid-1990s while experimenting with the foundations of Web 1.0 and informs his current work deciphering the third wave of disruption from AI and decentralized networks.
+                  </p>
+                  <p>
+                    Ultimately, his entire career, spanning six ventures from software to Web3, has been defined by a single question: How can technology serve our deepest human needs?
+                  </p>
+                  <p>
+                    Today, that question points unmistakably toward Bitcoin and blockchain—a global shift in trust architecture that empowers individuals to reclaim sovereignty over money, identity, and truth itself. Deven sees this moment as more than financial; it's civilizational. That's why he's committed to helping others cross the threshold from confusion to clarity—and from centralization to freedom.
+                  </p>
+                </div>
+              </div>
+              <div className="text-center mt-8 clear-both">
                 <a
-                  href="#"
+                  href="https://www.deven.cloud"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center px-8 py-3 rounded-lg border border-gray-300 bg-white text-base font-semibold text-gray-900 shadow-soft hover:bg-gray-50 hover:shadow-medium transform hover:-translate-y-0.5 transition-all duration-200"
                 >
                   Learn more about Deven Spear
+                  <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
                 </a>
               </div>
             </div>
           </div>
         </AnimateOnScroll>
 
-        <AnimateOnScroll type="fade-up" delay={500}>
-          <div className="mt-8 text-center">
-            <div className="bg-white rounded-xl p-6 shadow-medium">
-              <p className="text-gray-600">
-                Have questions? Reach out at{' '}
-                <a href="mailto:hello@cryptodeven.com" className="text-indigo-600 hover:text-indigo-500 font-medium transition-colors">
-                  hello@cryptodeven.com
-                </a>
-              </p>
-            </div>
-          </div>
-        </AnimateOnScroll>
+
       </div>
     </section>
   );

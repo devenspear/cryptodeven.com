@@ -30,16 +30,20 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 safe-area-padding ${
       isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-gray-900">
+            <Link href="/" className="flex items-center touch-friendly">
+              <span className="text-xl sm:text-2xl font-bold text-gray-900">
                 CryptoDeven
               </span>
             </Link>
@@ -50,37 +54,37 @@ export default function Header() {
             <div className="ml-10 flex items-center space-x-8">
               <Link
                 href="#why"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors touch-friendly"
               >
                 Why Crypto
               </Link>
               <Link
                 href="#get-started"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors touch-friendly"
               >
                 Get Started
               </Link>
               <Link
                 href="#resources"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors touch-friendly"
               >
                 Resources
               </Link>
               <Link
                 href="#thought-leaders"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors touch-friendly"
               >
                 Experts
               </Link>
               <Link
                 href="#contact"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors touch-friendly"
               >
                 About
               </Link>
               <Link
                 href="#get-started"
-                className="ml-4 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-soft hover:bg-indigo-500 transition-all duration-200"
+                className="ml-4 rounded-lg btn-gradient px-4 py-2 text-sm font-semibold text-white shadow-soft transition-all duration-200 touch-friendly"
               >
                 Get Started
               </Link>
@@ -89,11 +93,11 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
-            <button
-              onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-              aria-label="Toggle mobile menu"
-            >
+                          <button
+                onClick={toggleMenu}
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 touch-friendly"
+                aria-label="Toggle mobile menu"
+              >
               <span className="sr-only">
                 {isMenuOpen ? 'Close menu' : 'Open menu'}
               </span>
@@ -126,46 +130,46 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 backdrop-blur-sm rounded-lg mt-2 shadow-medium">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 backdrop-blur-sm rounded-lg mt-2 shadow-medium border border-gray-100">
               <Link
                 href="#why"
-                className="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-600 hover:text-gray-900 block px-3 py-3 text-base font-medium transition-colors touch-friendly"
+                onClick={closeMenu}
               >
                 Why Crypto
               </Link>
               <Link
                 href="#get-started"
-                className="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-600 hover:text-gray-900 block px-3 py-3 text-base font-medium transition-colors touch-friendly"
+                onClick={closeMenu}
               >
                 Get Started
               </Link>
               <Link
                 href="#resources"
-                className="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-600 hover:text-gray-900 block px-3 py-3 text-base font-medium transition-colors touch-friendly"
+                onClick={closeMenu}
               >
                 Resources
               </Link>
               <Link
                 href="#thought-leaders"
-                className="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-600 hover:text-gray-900 block px-3 py-3 text-base font-medium transition-colors touch-friendly"
+                onClick={closeMenu}
               >
                 Experts
               </Link>
               <Link
                 href="#contact"
-                className="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-600 hover:text-gray-900 block px-3 py-3 text-base font-medium transition-colors touch-friendly"
+                onClick={closeMenu}
               >
                 About
               </Link>
               <Link
                 href="#get-started"
-                className="block mt-4 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-soft hover:bg-indigo-500 transition-all duration-200 text-center"
-                onClick={() => setIsMenuOpen(false)}
+                className="block mt-4 mx-3 rounded-lg btn-gradient px-4 py-3 text-base font-semibold text-white shadow-soft transition-all duration-200 text-center touch-friendly"
+                onClick={closeMenu}
               >
                 Get Started
               </Link>

@@ -63,19 +63,15 @@ const thoughtLeaders = [
     description: "Entrepreneur and technologist",
     initials: "BS",
     color: "bg-teal-500"
-  }
-];
-
-const quotes = [
-  {
-    text: "Gold needed trust — Bitcoin doesn't.",
-    author: "Jack Mallers",
-    color: "bg-blue-50 border-blue-200"
   },
   {
-    text: "Bitcoin is the apex property of the human race.",
-    author: "Michael Saylor",
-    color: "bg-indigo-50 border-indigo-200"
+    name: "Lyn Alden",
+    focus: "Macro strategy",
+    handle: "@LynAldenContact",
+    link: "https://twitter.com/LynAldenContact",
+    description: "Investment strategist known for her data-driven Bitcoin theses and long-term macroeconomic insights",
+    initials: "LA",
+    color: "bg-red-500"
   }
 ];
 
@@ -85,7 +81,7 @@ export default function ThoughtLeaders() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll type="fade-up" className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-            <span className="text-gradient">Thought-Leader</span> Gallery
+            <span className="text-gradient">Thought</span> Leaders
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
             Real voices, real conviction. Tap a card to explore their latest insights.
@@ -96,24 +92,24 @@ export default function ThoughtLeaders() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {thoughtLeaders.map((leader, index) => (
               <AnimateOnScroll key={leader.name} type="fade-up" delay={index * 50}>
-                <div className="bg-white rounded-xl shadow-medium hover:shadow-lg transition-all duration-300 overflow-hidden group hover:-translate-y-1 border border-gray-100">
-                  <div className="p-6">
+                <a
+                  href={leader.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-white rounded-xl shadow-medium hover:shadow-lg transition-all duration-300 overflow-hidden group hover:-translate-y-1 border border-gray-100 cursor-pointer h-full"
+                >
+                  <div className="p-6 h-full flex flex-col">
                     <div className="flex items-center justify-between mb-4">
                       <div className={`w-12 h-12 ${leader.color} rounded-full flex items-center justify-center`}>
                         <span className="text-white font-bold text-sm">
                           {leader.initials}
                         </span>
                       </div>
-                      <a
-                        href={leader.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-indigo-500 transition-colors"
-                      >
+                      <div className="text-gray-400 group-hover:text-indigo-500 transition-colors">
                         <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
-                      </a>
+                      </div>
                     </div>
                     
                     <h3 className="text-lg font-bold text-gray-900 mb-1">
@@ -124,40 +120,15 @@ export default function ThoughtLeaders() {
                       {leader.focus}
                     </p>
                     
-                    <p className="text-gray-600 text-sm mb-3">
+                    <p className="text-gray-600 text-sm mb-3 flex-grow">
                       {leader.description}
                     </p>
                     
-                    <div className="flex items-center text-sm text-gray-500">
+                    <div className="flex items-center text-sm text-gray-500 mt-auto">
                       <span className="font-mono">{leader.handle}</span>
                     </div>
                   </div>
-                </div>
-              </AnimateOnScroll>
-            ))}
-          </div>
-        </div>
-
-        {/* Quotes Section */}
-        <div className="mt-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {quotes.map((quote, index) => (
-              <AnimateOnScroll key={index} type="fade-up" delay={700 + index * 100}>
-                <div className={`${quote.color} rounded-xl p-8 shadow-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border`}>
-                  <div className="flex items-start">
-                    <svg className="h-8 w-8 text-gray-400 mr-4 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 32 32">
-                      <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"/>
-                    </svg>
-                    <div>
-                      <blockquote className="text-lg text-gray-900 font-medium mb-4">
-                        "{quote.text}"
-                      </blockquote>
-                      <cite className="text-indigo-600 font-semibold text-sm">
-                        —{quote.author}
-                      </cite>
-                    </div>
-                  </div>
-                </div>
+                </a>
               </AnimateOnScroll>
             ))}
           </div>

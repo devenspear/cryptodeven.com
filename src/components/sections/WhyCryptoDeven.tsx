@@ -16,14 +16,16 @@ export default function WhyCryptoDeven() {
 
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <AnimateOnScroll type="fade-up" delay={100}>
-            <div className="rounded-xl bg-white p-8 text-center shadow-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="mx-auto h-12 w-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-6">
-                <svg className="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
+            <div className="rounded-xl bg-white p-8 text-center shadow-medium transition-all duration-500 h-64 flex flex-col justify-between group">
+              <div>
+                <div className="mx-auto h-12 w-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors duration-300">10%</h3>
+                <p className="text-lg font-semibold text-gray-900 mb-2">Current adoption rate</p>
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">10%</h3>
-              <p className="text-lg font-semibold text-gray-900 mb-2">Current adoption rate</p>
               <p className="text-sm text-gray-600">
                 The critical mass threshold where exponential growth begins
               </p>
@@ -31,14 +33,16 @@ export default function WhyCryptoDeven() {
           </AnimateOnScroll>
 
           <AnimateOnScroll type="fade-up" delay={200}>
-            <div className="rounded-xl bg-white p-8 text-center shadow-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="mx-auto h-12 w-12 rounded-lg bg-green-100 flex items-center justify-center mb-6">
-                <svg className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                </svg>
+            <div className="rounded-xl bg-white p-8 text-center shadow-medium transition-all duration-500 h-64 flex flex-col justify-between group">
+              <div>
+                <div className="mx-auto h-12 w-12 rounded-lg bg-green-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                  </svg>
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors duration-300">$1.4T</h3>
+                <p className="text-lg font-semibold text-gray-900 mb-2">Market capitalization</p>
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">$1.4T</h3>
-              <p className="text-lg font-semibold text-gray-900 mb-2">Market capitalization</p>
               <p className="text-sm text-gray-600">
                 Larger than most countries' GDP, still growing rapidly
               </p>
@@ -46,14 +50,16 @@ export default function WhyCryptoDeven() {
           </AnimateOnScroll>
 
           <AnimateOnScroll type="fade-up" delay={300}>
-            <div className="rounded-xl bg-white p-8 text-center shadow-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="mx-auto h-12 w-12 rounded-lg bg-purple-100 flex items-center justify-center mb-6">
-                <svg className="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
+            <div className="rounded-xl bg-white p-8 text-center shadow-medium transition-all duration-500 h-64 flex flex-col justify-between group">
+              <div>
+                <div className="mx-auto h-12 w-12 rounded-lg bg-purple-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors duration-300">500M+</h3>
+                <p className="text-lg font-semibold text-gray-900 mb-2">Global users</p>
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">500M+</h3>
-              <p className="text-lg font-semibold text-gray-900 mb-2">Global users</p>
               <p className="text-sm text-gray-600">
                 From early adopters to mainstream institutions
               </p>
@@ -67,7 +73,7 @@ export default function WhyCryptoDeven() {
           </p>
           <a
             href="#get-started"
-            className="inline-flex items-center px-8 py-4 rounded-lg bg-indigo-600 text-base font-semibold text-white shadow-soft hover:bg-indigo-500 hover:shadow-medium transform hover:-translate-y-0.5 transition-all duration-200"
+            className="inline-flex items-center px-8 py-4 rounded-lg btn-gradient text-base font-semibold text-white shadow-soft hover:shadow-medium transform transition-all duration-200"
           >
             Start Learning Now
             <svg className="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
