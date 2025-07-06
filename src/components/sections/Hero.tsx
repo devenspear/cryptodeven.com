@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="text-center">
           <AnimateOnScroll type="fade-up" delay={100}>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight sm:leading-tight lg:leading-tight">
-              <span className="block pb-2">Crypto Doesn't Have to</span>
+              <span className="block pb-2">Crypto Doesn&apos;t Have to</span>
               <span className="block text-gradient pb-4">Be Confusing</span>
             </h1>
             <h2 className="mt-8 text-xl text-gray-600 sm:text-2xl lg:text-3xl font-normal leading-relaxed">

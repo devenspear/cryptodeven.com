@@ -10,8 +10,8 @@ export default function WhyCryptoDeven() {
             <span className="text-gradient">Why now?</span> Bitcoin hits 10% adoption milestone
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
-            We're at the tipping point. History shows that once a technology reaches 10% adoption, 
-            mass adoption follows rapidly. Don't get left behind.
+            We&apos;re at the tipping point. History shows that once a technology reaches 10% adoption, 
+            mass adoption follows rapidly. Don&apos;t get left behind.
           </p>
         </AnimateOnScroll>
 
@@ -45,7 +45,7 @@ export default function WhyCryptoDeven() {
                 <p className="text-lg font-semibold text-gray-900 mb-2">Market capitalization</p>
               </div>
               <p className="text-sm text-gray-600">
-                Larger than most countries' GDP, still growing rapidly
+                Larger than most countries&apos; GDP, still growing rapidly
               </p>
             </div>
           </AnimateOnScroll>

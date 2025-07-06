@@ -16,8 +16,8 @@ export default function FastLane() {
             The adoption curve is bending upward
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-xl text-gray-600 dark:text-gray-300">
-            Crypto's user base is growing <span className="font-semibold text-indigo-600 dark:text-indigo-400">2× faster</span> than the early internet. 
-            Wall Street has flipped bullish (BlackRock calls Bitcoin "digital gold"); governments are drafting pro-crypto rules. 
+            Crypto&apos;s user base is growing <span className="font-semibold text-indigo-600 dark:text-indigo-400">2× faster</span> than the early internet. 
+            Wall Street has flipped bullish (BlackRock calls Bitcoin &ldquo;digital gold&rdquo;); governments are drafting pro-crypto rules. 
             Waiting gets riskier each year—learning now is the edge.
           </p>
         </div>

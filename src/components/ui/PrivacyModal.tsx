@@ -57,7 +57,7 @@ export default function PrivacyModal({ isOpen, onClose }: PrivacyModalProps) {
 
           <div className="prose prose-gray max-w-none">
             <p className="mb-6">
-              CryptoDeven.com ("we," "us," or "our") is committed to protecting your privacy. 
+              CryptoDeven.com (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is committed to protecting your privacy. 
               This Privacy Policy describes how we collect, use, and safeguard your information when you visit our website.
             </p>
 

@@ -70,7 +70,7 @@ export default function TermsModal({ isOpen, onClose }: TermsModalProps) {
 
             <h3 className="text-lg font-semibold text-gray-900 mb-3">2. No Warranties</h3>
             <p className="mb-6">
-              We make no guarantees about the accuracy, completeness, or reliability of any information on the site. All content is provided "as is" without warranties of any kind.
+              We make no guarantees about the accuracy, completeness, or reliability of any information on the site. All content is provided &ldquo;as is&rdquo; without warranties of any kind.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-900 mb-3">3. User Responsibility</h3>

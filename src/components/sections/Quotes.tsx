@@ -2,7 +2,7 @@ import { AnimateOnScroll } from '../animation/AnimateOnScroll';
 
 const quotes = [
   {
-    text: "Gold needed trust — Bitcoin doesn't.",
+    text: "Gold needed trust — Bitcoin doesn&apos;t.",
     author: "Jack Mallers",
     color: "bg-blue-50 border-blue-200"
   },
@@ -27,7 +27,7 @@ export default function Quotes() {
                   </svg>
                   <div>
                     <blockquote className="text-lg text-gray-900 font-medium mb-4">
-                      "{quote.text}"
+                      &ldquo;{quote.text}&rdquo;
                     </blockquote>
                     <cite className="text-indigo-600 font-semibold text-sm">
                       —{quote.author}

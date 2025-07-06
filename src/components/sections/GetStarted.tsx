@@ -20,7 +20,7 @@ export default function GetStarted() {
       detailContent: (
         <div className="space-y-4">
           <p className="text-gray-600">
-            Getting started is as easy as signing up. Coinbase is the most beginner-friendly crypto platform in the U.S., trusted by over 100 million users. It's fully regulated, secure, and easy to navigate.
+            Getting started is as easy as signing up. Coinbase is the most beginner-friendly crypto platform in the U.S., trusted by over 100 million users. It&apos;s fully regulated, secure, and easy to navigate.
           </p>
           <div className="space-y-2">
             <div className="flex items-center text-green-600">
@@ -33,7 +33,7 @@ export default function GetStarted() {
             </div>
             <div className="flex items-center text-green-600">
               <span className="mr-2">✅</span>
-              <span>You're ready to explore crypto</span>
+              <span>You&apos;re ready to explore crypto</span>
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function GetStarted() {
       detailContent: (
         <div className="space-y-4">
           <p className="text-gray-600">
-            To buy your first Bitcoin, you'll need to connect a bank account, debit card, or Apple Pay.
+            To buy your first Bitcoin, you&apos;ll need to connect a bank account, debit card, or Apple Pay.
           </p>
           <div className="space-y-3">
             <div className="flex items-start">
@@ -96,7 +96,7 @@ export default function GetStarted() {
             Start small — even $10 buys you a piece of the future.
           </p>
           <p className="text-gray-600">
-            Buying Bitcoin is as simple as clicking "Buy" on your dashboard. Choose how much to invest, confirm your payment method, and you're done.
+            Buying Bitcoin is as simple as clicking &ldquo;Buy&rdquo; on your dashboard. Choose how much to invest, confirm your payment method, and you&apos;re done.
           </p>
           <div className="space-y-2">
             <div className="flex items-center text-green-600">
@@ -164,7 +164,7 @@ export default function GetStarted() {
           <div className="space-y-2">
             <div className="flex items-center text-green-600">
               <span className="mr-2">✅</span>
-              <span>Start with a small "test" transaction ($5–10)</span>
+              <span>Start with a small &ldquo;test&rdquo; transaction ($5–10)</span>
             </div>
             <div className="flex items-center text-green-600">
               <span className="mr-2">✅</span>

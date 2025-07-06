@@ -35,7 +35,7 @@ export default function Contact() {
                     Ultimately, his entire career, spanning six ventures from software to Web3, has been defined by a single question: How can technology serve our deepest human needs?
                   </p>
                   <p>
-                    Today, that question points unmistakably toward Bitcoin and blockchain—a global shift in trust architecture that empowers individuals to reclaim sovereignty over money, identity, and truth itself. Deven sees this moment as more than financial; it's civilizational. That's why he's committed to helping others cross the threshold from confusion to clarity—and from centralization to freedom.
+                    Today, that question points unmistakably toward Bitcoin and blockchain—a global shift in trust architecture that empowers individuals to reclaim sovereignty over money, identity, and truth itself. Deven sees this moment as more than financial; it&apos;s civilizational. That&apos;s why he&apos;s committed to helping others cross the threshold from confusion to clarity—and from centralization to freedom.
                   </p>
                 </div>
               </div>
