@@ -46,14 +46,14 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/cryptodeven_icon.png?v=2', sizes: '32x32', type: 'image/png' },
-      { url: '/cryptodeven_icon.png?v=2', sizes: '16x16', type: 'image/png' },
-      { url: '/cryptodeven_icon.png?v=2' },
+      { url: '/favicon.png?v=3', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.png?v=3', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon.png?v=3' },
     ],
-    shortcut: '/cryptodeven_icon.png?v=2',
+    shortcut: '/favicon.png?v=3',
     apple: [
-      { url: '/cryptodeven_icon.png?v=2', sizes: '180x180', type: 'image/png' },
-      { url: '/cryptodeven_icon.png?v=2' },
+      { url: '/favicon.png?v=3', sizes: '180x180', type: 'image/png' },
+      { url: '/favicon.png?v=3' },
     ],
   },
   openGraph: {
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/cryptodeven_icon.png',
+        url: '/favicon.png',
         width: 800,
         height: 600,
         alt: 'CryptoDeven Logo',
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     title: 'CryptoDeven – Crypto Clarity for Absolute Beginners',
     description: 'From zero clue to crypto-confident. Plain-English guides, expert picks, and one weekly email that keeps you ahead.',
     creator: '@CryptoDeven',
-    images: ['/cryptodeven_icon.png'],
+    images: ['/favicon.png'],
   },
 };
 
@@ -96,10 +96,10 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         
         {/* Favicon Links - Safari prefers explicit links */}
-        <link rel="icon" type="image/png" href="/cryptodeven_icon.png?v=2" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/cryptodeven_icon.png?v=2" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/cryptodeven_icon.png?v=2" />
-        <link rel="shortcut icon" href="/cryptodeven_icon.png?v=2" />
+        <link rel="icon" type="image/png" href="/favicon.png?v=3" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=3" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=3" />
+        <link rel="shortcut icon" href="/favicon.png?v=3" />
         
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CMKL6MH2QV"></script>
