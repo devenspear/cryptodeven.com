@@ -1,4 +1,5 @@
 import { AnimateOnScroll } from '../animation/AnimateOnScroll';
+import BitcoinPrice from '../ui/BitcoinPrice';
 
 export default function WhyCryptoDeven() {
   return (
@@ -66,6 +67,8 @@ export default function WhyCryptoDeven() {
             </div>
           </AnimateOnScroll>
         </div>
+
+        <BitcoinPrice />
 
         <AnimateOnScroll type="fade-up" delay={400} className="mt-16 text-center">
           <p className="text-lg text-gray-600 mb-8">

@@ -45,9 +45,16 @@ export const metadata: Metadata = {
     canonical: 'https://cryptodeven.com',
   },
   icons: {
-    icon: '/cryptodeven_icon.png',
-    shortcut: '/cryptodeven_icon.png',
-    apple: '/cryptodeven_icon.png',
+    icon: [
+      { url: '/cryptodeven_icon.png?v=2', sizes: '32x32', type: 'image/png' },
+      { url: '/cryptodeven_icon.png?v=2', sizes: '16x16', type: 'image/png' },
+      { url: '/cryptodeven_icon.png?v=2' },
+    ],
+    shortcut: '/cryptodeven_icon.png?v=2',
+    apple: [
+      { url: '/cryptodeven_icon.png?v=2', sizes: '180x180', type: 'image/png' },
+      { url: '/cryptodeven_icon.png?v=2' },
+    ],
   },
   openGraph: {
     title: 'CryptoDeven – Crypto Clarity for Absolute Beginners',
@@ -87,6 +94,12 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        
+        {/* Favicon Links - Safari prefers explicit links */}
+        <link rel="icon" type="image/png" href="/cryptodeven_icon.png?v=2" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/cryptodeven_icon.png?v=2" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/cryptodeven_icon.png?v=2" />
+        <link rel="shortcut icon" href="/cryptodeven_icon.png?v=2" />
         
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CMKL6MH2QV"></script>
