@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { AnimateOnScroll } from '../animation/AnimateOnScroll';
 
 const resources = {
@@ -151,10 +152,14 @@ export default function Resources() {
                     <div className="flex p-6 gap-6">
                       <div className="flex-shrink-0 w-1/3 flex flex-col">
                         <div className="p-3">
-                          <img
+                          <Image
                             src={video.thumbnail}
                             alt={video.creator}
+                            width={150}
+                            height={150}
                             className="w-full aspect-square object-cover rounded-lg mb-4"
+                            quality={85}
+                            loading="lazy"
                           />
                           <div className="flex justify-center">
                             <div className="w-16 h-16 bg-white bg-opacity-95 rounded-full flex items-center justify-center animate-pulse group-hover:animate-none group-hover:scale-110 transition-all duration-300 shadow-lg border-2 border-blue-100">
@@ -204,10 +209,14 @@ export default function Resources() {
                     >
                       <div className="flex flex-col h-full">
                         <div className="flex items-center justify-center mb-4">
-                          <img
+                          <Image
                             src={book.thumbnail}
                             alt={book.title}
+                            width={128}
+                            height={192}
                             className="w-32 h-48 object-cover rounded-lg shadow-md"
+                            quality={85}
+                            loading="lazy"
                           />
                         </div>
                         <div className="flex-1 flex flex-col">
@@ -245,10 +254,14 @@ export default function Resources() {
                       >
                         <div className="flex flex-col h-full">
                           <div className="flex items-center justify-center mb-4">
-                            <img
+                            <Image
                               src={book.thumbnail}
                               alt={book.title}
+                              width={128}
+                              height={192}
                               className="w-32 h-48 object-cover rounded-lg shadow-md"
+                              quality={85}
+                              loading="lazy"
                             />
                           </div>
                           <div className="flex-1 flex flex-col">

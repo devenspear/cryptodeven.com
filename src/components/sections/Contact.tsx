@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { AnimateOnScroll } from '../animation/AnimateOnScroll';
 
 export default function Contact() {
@@ -14,10 +15,14 @@ export default function Contact() {
           <div className="mt-12 max-w-4xl mx-auto">
             <div className="bg-white rounded-xl p-8 md:p-12 shadow-medium">
               <div className="relative">
-                <img
+                <Image
                   src="/DevenHead2025.jpg"
                   alt="Deven Spear"
+                  width={192}
+                  height={192}
                   className="float-right ml-8 mb-6 w-48 h-auto rounded-lg shadow-medium object-cover"
+                  quality={85}
+                  loading="lazy"
                 />
                 <div className="text-lg text-gray-600 leading-relaxed space-y-6">
                   <p>

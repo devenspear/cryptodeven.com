@@ -50,6 +50,8 @@ export default function Header() {
                 width={40}
                 height={40}
                 className="h-8 w-8 sm:h-10 sm:w-10"
+                priority
+                quality={90}
               />
             </Link>
           </div>

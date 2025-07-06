@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "../context/ThemeContext";
 import Header from '../components/layout/Header';
@@ -9,6 +10,8 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
+  preload: true,
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
 });
 
 // Viewport export for mobile responsiveness and theme colors
@@ -101,18 +104,11 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=3" />
         <link rel="shortcut icon" href="/favicon.png?v=3" />
         
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CMKL6MH2QV"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-CMKL6MH2QV');
-            `,
-          }}
-        />
+        {/* Preload critical resources */}
+        <link rel="preload" href="/cryptodeven_icon.png" as="image" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+
         
         {/* Structured Data for SEO */}
         <script
@@ -137,6 +133,20 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} min-h-screen bg-white`}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-CMKL6MH2QV"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-CMKL6MH2QV');
+          `}
+        </Script>
+        
         <ThemeProvider>
           <div className="min-h-screen">
             <Header />
